@@ -21,9 +21,9 @@ const {
   DeleteBrand,
 } = require("./Brand.controller.js");
 
-// const carRouter = require("../Car/Car.router.js");
+const carRouter = require("../Car/Car.router.js");
  
-// router.use('/:id',carRouter)
+router.use('/:id',carRouter)
 
 router.get("/", GetAllBrands);
 

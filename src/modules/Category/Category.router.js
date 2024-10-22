@@ -3,7 +3,7 @@ const router = express.Router();
 const isAuthenticated = require("../../middleware/authentication.middeleware.js");
 const isAuthorized = require("../../middleware/authoriztion.middelware.js");
 const { validation } = require("../../middleware/validation.middleware.js");
-//const carRouter = require("../Car/Car.router.js");
+const carRouter = require("../Car/Car.router.js");
 const { fileUpload, allowedFiles } = require("../../utils/fileUpload.js");
  
 const {
@@ -22,7 +22,7 @@ const {
   GetCategoryById,
 } = require("./Category.controller.js");
 
-// router.use("/:id", carRouter); 
+router.use("/:id", carRouter); 
 
 router.get("/search", SearchCategory);
  
